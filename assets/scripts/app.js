@@ -10,7 +10,8 @@ const config = {
 };
 
 // State Management
-let currentPage = 'home';
+// Start empty so the initial navigateTo(config.defaultPage) actually loads the page
+let currentPage = '';
 
 // ===========================
 // Initialization
