@@ -1,0 +1,230 @@
+<div class="page-content">
+    <!-- Page Title -->
+    <section class="page-section text-center">
+        <h1 class="section-title glow">Nous Contacter</h1>
+        <p class="section-text" style="font-size: 1.2rem;">
+            Intéressé pour rejoindre les Gardiens du Lys ? Dites-nous qui vous êtes !
+        </p>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="page-section">
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            <div class="card text-center">
+                <h3 class="card-title">📧 Email</h3>
+                <p class="card-text">
+                    <a href="mailto:contact@gardiensdulys.com" style="color: #c77dff; text-decoration: none;">
+                        contact@gardiensdulys.com
+                    </a>
+                </p>
+                <p class="card-text" style="font-size: 0.9rem; color: #a0a0c5;">
+                    Réponse dans les 24 heures
+                </p>
+            </div>
+
+            <div class="card text-center">
+                <h3 class="card-title">
+                    <img src="assets/images/discord-icon.svg" alt="Discord"
+                        style="width: 30px; height: 30px; display: inline-block; margin-bottom: 0.5rem;">
+                </h3>
+                <p class="card-text">
+                    <a href="https://discord.gg/ctPkEjKVQ5" target="_blank" rel="noopener noreferrer"
+                        style="color: #c77dff; text-decoration: none; font-weight: bold;">
+                        Rejoignez notre Serveur Discord
+                    </a>
+                </p>
+                <p class="card-text" style="font-size: 0.9rem; color: #a0a0c5;">
+                    Support 24/7 | Tag: <span style="color: #9d4edd; font-weight: bold;">GDL</span>
+                </p>
+            </div>
+
+            <div class="card text-center">
+                <h3 class="card-title">🎮 OGame</h3>
+                <p class="card-text">
+                    Cherchez <span style="color: #c77dff; font-weight: bold;">GDL - Gardiens du Lys</span>
+                </p>
+                <p class="card-text" style="font-size: 0.9rem; color: #a0a0c5;">
+                    Demandes d'alliance directes
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="page-section">
+        <h2 class="section-subtitle">Formulaire de Candidature</h2>
+        <div class="card">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Pseudonyme OGame *</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre pseudonyme dans OGame">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="discord">Pseudo Discord (optionnel)</label>
+                    <input type="text" id="discord" name="discord" placeholder="VotreNom#1234">
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Niveau d'Expérience OGame *</label>
+                    <select id="experience" name="experience" required
+                        style="width: 100%; padding: 0.8rem; background: rgba(26, 26, 26, 0.8); border: 1px solid rgba(199, 125, 255, 0.3); border-radius: 4px; color: #d4d4f5; font-family: 'Black Ops One'; font-size: 1rem;">
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="novice">Novice (moins de 3 mois)</option>
+                        <option value="intermediaire">Intermédiaire (3-12 mois)</option>
+                        <option value="experimente">Expérimenté (1-5 ans)</option>
+                        <option value="veteran">Vétéran (plus de 5 ans)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="universe">Univers OGame Préféré(s) *</label>
+                    <input type="text" id="universe" name="universe" required
+                        placeholder="Ex: Univers 1, Univers 3, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label for="region">Région/Fuseau Horaire *</label>
+                    <select id="region" name="region" required
+                        style="width: 100%; padding: 0.8rem; background: rgba(26, 26, 26, 0.8); border: 1px solid rgba(199, 125, 255, 0.3); border-radius: 4px; color: #d4d4f5; font-family: 'Black Ops One'; font-size: 1rem;">
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="quebec">Québec (UTC-5)</option>
+                        <option value="ontario">Ontario (UTC-5)</option>
+                        <option value="manitoba">Manitoba/Saskatchewan (UTC-6)</option>
+                        <option value="alberta">Alberta (UTC-7)</option>
+                        <option value="colombie">Colombie-Britannique (UTC-8)</option>
+                        <option value="europe">Europe (UTC+1)</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="goals">Quels sont vos objectifs dans OGame ?</label>
+                    <textarea id="goals" name="goals"
+                        placeholder="Décrivez ce que vous cherchez à accomplir et pourquoi vous aimeriez rejoindre les Gardiens du Lys..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="questions">Avez-vous des questions ? (optionnel)</label>
+                    <textarea id="questions" name="questions"
+                        placeholder="N'hésitez pas à poser vos questions sur l'alliance, les règles, etc."></textarea>
+                </div>
+
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn" style="flex: 1;">
+                        Envoyer ma Candidature
+                    </button>
+                    <button type="reset" class="btn btn-secondary" style="flex: 1;">
+                        Réinitialiser
+                    </button>
+                </div>
+
+                <div id="formMessage" style="margin-top: 1rem; display: none; padding: 1rem; border-radius: 4px;"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="page-section">
+        <h2 class="section-subtitle">❓ Questions Fréquemment Posées</h2>
+
+        <div class="card">
+            <h3 class="card-title">Puis-je rejoindre si je suis un novice ?</h3>
+            <p class="card-text">
+                Absolument ! Les Gardiens du Lys accueillent les joueurs de tous niveaux. Nos veterans vous
+                enseigneront tout ce que vous devez savoir pour réussir dans OGame.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Y a-t-il des frais d'adhésion ?</h3>
+            <p class="card-text">
+                Non. L'alliance est totalement gratuite. OGame lui-même est gratuit (avec options premium optionnelles),
+                et les Gardiens du Lys ne facturent rien.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Quelle est la langue officielle de l'alliance ?</h3>
+            <p class="card-text">
+                Le français ! C'est une alliance française canadienne, donc nous communiquons principalement en
+                français,
+                bien que l'anglais soit parfois bienvenu.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Y a-t-il des obligations militaires ?</h3>
+            <p class="card-text">
+                Non, mais les membres actifs sont encouragés à participer aux opérations coordonnées.
+                Si vous avez peu de temps, c'est compris - nous accueillons les joueurs occasionnels aussi.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Comment fonctionne la diplomatie ?</h3>
+            <p class="card-text">
+                Les alliances et les guerres sont décidées collégialement par notre leadership.
+                Tous les membres actifs ont une voix dans les décisions majeures.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Que se passe-t-il si je veux partir ?</h3>
+            <p class="card-text">
+                Aucun problème. OGame est un jeu, pas un emploi. Si vous devez partir, parlez-en simplement
+                à un officier. Nous resterons amis.
+            </p>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="page-section">
+        <h2 class="section-subtitle">🎯 Processus de Candidature</h2>
+
+        <div style="position: relative; padding: 2rem 0;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; color: #c77dff; margin-bottom: 0.5rem;">1️⃣</div>
+                    <h3 class="card-title">Remplir le Formulaire</h3>
+                    <p class="card-text">Complétez ce formulaire avec vos informations.</p>
+                </div>
+
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; color: #c77dff; margin-bottom: 0.5rem;">2️⃣</div>
+                    <h3 class="card-title">Entretien Discord</h3>
+                    <p class="card-text">Un officier vous contactera pour une discussion rapide.</p>
+                </div>
+
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; color: #c77dff; margin-bottom: 0.5rem;">3️⃣</div>
+                    <h3 class="card-title">Période d'Essai</h3>
+                    <p class="card-text">Vous avez 2 semaines pour découvrir l'alliance.</p>
+                </div>
+
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; color: #c77dff; margin-bottom: 0.5rem;">4️⃣</div>
+                    <h3 class="card-title">Acceptation Officielle</h3>
+                    <p class="card-text">Bienvenue en tant que membre à part entière !</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="page-section text-center">
+        <div class="card">
+            <h3 class="card-title" style="font-size: 1.8rem;">Prêt à écrire votre histoire avec nous ?</h3>
+            <p class="card-text">
+                Remplissez le formulaire ci-dessus et rejoignez les Gardiens du Lys dès aujourd'hui.
+                L'univers vous attend !
+            </p>
+        </div>
+    </section>
+</div>

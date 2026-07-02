@@ -1,0 +1,25 @@
+# Robots.txt for Les Gardiens du Lys
+# Guides search engines on how to crawl and index the site
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /pages/
+Allow: /assets/
+
+# Disallow private or temporary pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://yourusername.github.io/gardiens-du-lys/sitemap.xml

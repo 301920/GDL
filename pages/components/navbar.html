@@ -1,0 +1,49 @@
+<nav class="navbar">
+    <a href="#" class="navbar-brand" onclick="navigateTo('home', event)">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px;">
+            <defs>
+                <style>
+                    .lys-fill {
+                        fill: #9d4edd;
+                    }
+
+                    .lys-stroke {
+                        stroke: #c77dff;
+                        stroke-width: 0.5;
+                    }
+                </style>
+            </defs>
+            <g transform="translate(50, 50)">
+                <path d="M 0,-25 Q -8,-15 -6,-5 Q -4,5 0,8 Q 4,5 6,-5 Q 8,-15 0,-25" class="lys-fill lys-stroke" />
+                <path d="M -15,-8 Q -20,-12 -22,-5 Q -23,3 -18,8 Q -12,10 -10,2 Q -8,-5 -15,-8"
+                    class="lys-fill lys-stroke" />
+                <path d="M 15,-8 Q 20,-12 22,-5 Q 23,3 18,8 Q 12,10 10,2 Q 8,-5 15,-8" class="lys-fill lys-stroke" />
+                <rect x="-2" y="8" width="4" height="18" class="lys-fill lys-stroke" />
+                <path d="M -2,20 Q -8,22 -10,18" stroke="#c77dff" stroke-width="1" fill="none" stroke-linecap="round" />
+                <path d="M 2,20 Q 8,22 10,18" stroke="#c77dff" stroke-width="1" fill="none" stroke-linecap="round" />
+                <circle cx="0" cy="-28" r="2" class="lys-fill" />
+            </g>
+        </svg>
+        Gardiens du Lys
+        <span
+            style="font-size: 0.7rem; color: #c77dff; font-weight: bold; letter-spacing: 1px; opacity: 0.8;">GDL</span>
+    </a>
+
+    <ul class="navbar-menu">
+        <li class="navbar-item">
+            <a href="#" class="navbar-link active" data-page="home" onclick="navigateTo('home', event)">
+                Home
+            </a>
+        </li>
+        <li class="navbar-item">
+            <a href="#" class="navbar-link" data-page="about" onclick="navigateTo('about', event)">
+                About
+            </a>
+        </li>
+        <li class="navbar-item">
+            <a href="#" class="navbar-link" data-page="contact" onclick="navigateTo('contact', event)">
+                Contact
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,45 @@
+# GitHub Pages Configuration
+# This file configures Jekyll for GitHub Pages
+
+# Site settings
+title: Les Gardiens du Lys
+description: Alliance Française Canadienne - OGame.fr
+baseurl: /gardiens-du-lys
+url: https://yourusername.github.io
+
+# Jekyll settings
+theme: jekyll-theme-minimal
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files from Jekyll processing
+exclude:
+  - node_modules/
+  - package.json
+  - README.md
+  - LICENSE
+  - .gitignore
+
+# Collections
+collections:
+  pages:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /favicon.svg
+
+# Permalink settings
+permalink: /:title/
+
+# Highlighter
+highlighter: rouge
+
+# Enable incremental regeneration
+incremental: true
