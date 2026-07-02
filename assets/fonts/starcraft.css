@@ -1,19 +1,16 @@
-/* StarCraft Font - Using fallback from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-
+/* StarCraft Font - local integration */
 @font-face {
     font-family: 'StarCraft';
-    src: url('../fonts/starcraft.ttf') format('truetype'), 
-         url('../fonts/starcraft.woff') format('woff');
-    font-weight: normal;
+    src: url('Starcraft-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
-/* Fallback for StarCraft font */
-@font-face {
-    font-family: 'StarCraft';
-    src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
-    font-weight: normal;
-    font-style: normal;
-    fallback: 'Orbitron', monospace;
+/* Provide a bold-ish fallback using Orbitron if needed */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
+
+/* Fallback family mapping */
+:root {
+    --starcraft-fallback: 'Orbitron', sans-serif;
 }

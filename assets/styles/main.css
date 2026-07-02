@@ -85,6 +85,7 @@ body {
     z-index: 100;
     width: 100%;
     background-color: var(--color-onyx);
+    overflow: hidden;
     box-shadow: 0 8px 32px rgba(157, 78, 221, 0.15);
 }
 
@@ -98,19 +99,28 @@ body {
     position: relative;
 }
 
-.navbar::before {
-    content: '';
+/* Navbar background video container */
+.navbar-bg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('assets/videos/moon.mp4');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.05;
-    pointer-events: none;
+    overflow: hidden;
     z-index: -1;
+    pointer-events: none;
+}
+
+.navbar-bg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.12;
+    filter: brightness(0.7) saturate(1.05);
 }
 
 .navbar-brand {
