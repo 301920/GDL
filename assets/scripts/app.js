@@ -443,15 +443,15 @@ function applyTranslations() {
         location.reload();
         return;
     }
-    
+
     // Apply English translations
     const trans = translations.en;
     const elements = document.querySelectorAll('*');
-    
+
     elements.forEach(el => {
         // Don't translate script or style content
         if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE') return;
-        
+
         // Translate text nodes
         for (let node of el.childNodes) {
             if (node.nodeType === 3) { // Text node
@@ -461,7 +461,7 @@ function applyTranslations() {
                 }
             }
         }
-        
+
         // Translate certain attributes
         if (el.placeholder && trans[el.placeholder]) {
             el.placeholder = trans[el.placeholder];
