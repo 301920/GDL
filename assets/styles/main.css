@@ -661,3 +661,36 @@ body {
 .slide-in {
     animation: slideIn 0.5s ease-out;
 }
+
+/* ===========================
+   LANGUAGE TOGGLE
+   =========================== */
+
+.language-toggle {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.lang-btn {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid rgba(199, 125, 255, 0.3);
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    color: var(--color-text);
+}
+
+.lang-btn:hover {
+    border-color: var(--color-secondary);
+    background: rgba(199, 125, 255, 0.1);
+}
+
+.lang-btn.active {
+    background: rgba(199, 125, 255, 0.2);
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}

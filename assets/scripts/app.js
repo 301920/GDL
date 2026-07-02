@@ -12,6 +12,33 @@ const config = {
 // State Management
 // Start empty so the initial navigateTo(config.defaultPage) actually loads the page
 let currentPage = '';
+let currentLanguage = localStorage.getItem('language') || 'fr';
+
+// Translation Dictionary
+const translations = {
+    fr: {},
+    en: {
+        'Home': 'Home',
+        'About': 'About',
+        'Contact': 'Contact',
+        'Nous Contacter': 'Contact Us',
+        'Intéressé pour rejoindre les Gardiens du Lys ? Dites-nous qui vous êtes !': 'Interested in joining the Guardians of the Lily? Tell us who you are!',
+        'Rejoignez notre Serveur Discord': 'Join our Discord Server',
+        'Support 24/7': 'Support 24/7',
+        'Email': 'Email',
+        'Adresse Email': 'Email Address',
+        'Réponse dans les 24 heures': 'Response within 24 hours',
+        'Pseudo Discord (optionnel)': 'Discord Username (optional)',
+        'OGame': 'OGame',
+        'Cherchez': 'Look for',
+        'Demandes d\'alliance directes': 'Direct alliance requests',
+        'Formulaire de Candidature': 'Application Form',
+        'Pseudonyme OGame': 'OGame Username',
+        'Découvrir Notre Alliance': 'Discover Our Alliance',
+        'Nous Rejoindre': 'Join Us',
+        'Gardiens du Lys': 'Guardians of the Lily'
+    }
+};
 
 // ===========================
 // Initialization
@@ -19,6 +46,7 @@ let currentPage = '';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
+    updateLanguageToggle();
 });
 
 async function initializeApp() {
@@ -373,6 +401,79 @@ window.addEventListener('popstate', (event) => {
         loadPageContent(event.state.page);
     }
 });
+
+// ===========================
+// Language Switching
+// ===========================
+
+/**
+ * Switch language
+ * @param {string} lang - Language code (fr or en)
+ * @param {Event} event - Click event
+ */
+function switchLanguage(lang, event) {
+    if (event) {
+        event.preventDefault();
+    }
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    updateLanguageToggle();
+    applyTranslations();
+}
+
+/**
+ * Update language toggle button states
+ */
+function updateLanguageToggle() {
+    const buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === currentLanguage) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+/**
+ * Apply translations to page content
+ */
+function applyTranslations() {
+    if (currentLanguage === 'fr') {
+        // Reset to original French content by reloading
+        location.reload();
+        return;
+    }
+    
+    // Apply English translations
+    const trans = translations.en;
+    const elements = document.querySelectorAll('*');
+    
+    elements.forEach(el => {
+        // Don't translate script or style content
+        if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE') return;
+        
+        // Translate text nodes
+        for (let node of el.childNodes) {
+            if (node.nodeType === 3) { // Text node
+                const text = node.textContent.trim();
+                if (text && trans[text]) {
+                    node.textContent = trans[text];
+                }
+            }
+        }
+        
+        // Translate certain attributes
+        if (el.placeholder && trans[el.placeholder]) {
+            el.placeholder = trans[el.placeholder];
+        }
+    });
+}
+
+// Initialize language on page load
+if (currentLanguage === 'en') {
+    // Small delay to ensure DOM is ready
+    setTimeout(applyTranslations, 100);
+}
 
 // Log app version
 console.log('%cLes Gardiens du Lys v1.0', 'color: #9d4edd; font-size: 20px; font-weight: bold;');
