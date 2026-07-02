@@ -70,8 +70,8 @@ body {
     height: 100%;
     object-fit: cover;
     background-position: center;
-    /* Zoom out the background image to 50% so more of the pattern shows */
-    background-size: 50% 50%;
+    /* Scale the background image to 75% per user request */
+    background-size: 75% 75%;
     background-repeat: repeat;
     background-attachment: fixed;
     opacity: 0.625;
