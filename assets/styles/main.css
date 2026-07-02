@@ -69,8 +69,6 @@ body {
     width: 98%;
     height: 82.5%;
     object-fit: cover;
-    background-position: center;
-    background-attachment: fixed;
     opacity: 0.625;
     z-index: 3;
 }
