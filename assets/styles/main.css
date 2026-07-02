@@ -65,13 +65,9 @@ body {
 .bg-opacity {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/opacity.jpg');
-    background-size: 75% 75%;
-    background-repeat: repeat;
-    background-position: center;
+    left: 2%;
+    width: 96%;
+    height: 92%;
     opacity: 0.625;
     z-index: -1;
     pointer-events: none;
@@ -598,7 +594,7 @@ body {
     padding: 0.2rem 0.65rem;
     background: linear-gradient(135deg, #5865F2, #7289DA);
     color: white;
-    transform: scale(1.325);
+    transform: scale(1.65);
     text-decoration: none;
     border-radius: 2px;
     transition: all var(--transition-smooth);
